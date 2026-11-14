@@ -87,7 +87,6 @@ function updateThemeButtons(theme) {
     const next = theme === "dark" ? "light" : "dark";
     button.setAttribute("aria-label", `Switch to ${next} theme`);
     button.setAttribute("title", `Switch to ${next} theme`);
-    button.setAttribute("aria-pressed", String(theme === "dark"));
   }
 }
 

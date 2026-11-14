@@ -537,8 +537,12 @@
   gap: 0;
 }
 
+/* .filter-group is a <fieldset>: reset the browser's default border, margin and min-width */
 .filter-group {
-  padding: var(--sp-4) 0;
+  min-width: 0;
+  margin: 0;
+  padding: var(--sp-5, 20px) 0;
+  border: 0;
   border-top: 1px solid var(--border);
 }
 
@@ -547,7 +551,13 @@
   border-top: 0;
 }
 
+.filter-group:last-child {
+  padding-bottom: 0;
+}
+
 .filter-group legend {
+  float: left;
+  width: 100%;
   margin: 0 0 var(--sp-3);
   padding: 0;
   font-family: var(--font-body);
@@ -604,12 +614,19 @@
   outline-offset: 2px;
 }
 
+/* Padding gives focus rings room so the scroll container does not clip them */
 .filter-list {
   display: grid;
   gap: 2px;
   max-height: 264px;
-  padding-right: 4px;
+  margin: -6px -6px -6px -6px;
+  padding: 6px 10px 6px 6px;
   overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.filter-group legend + * {
+  clear: both;
 }
 
 .filter-list .checkbox--row {
@@ -798,8 +815,11 @@
     top: calc(var(--header-h) + var(--sp-4));
     display: block;
     max-height: calc(100svh - var(--header-h) - var(--sp-8));
+    margin: -6px;
+    padding: 6px 12px 24px 6px;
     overflow-y: auto;
-    padding-right: var(--sp-2);
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
   }
 
   .results-grid {
