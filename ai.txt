@@ -1,0 +1,17 @@
+# ai.txt for Delsi Meat Solutions
+# Preferences for AI systems that read this site.
+# Text and product data may be read, summarised and cited so customers can find us.
+# Images (logo and product photos) may not be used to train AI models.
+
+User-Agent: *
+Allow: *.html
+Allow: *.txt
+Allow: *.json
+Disallow: *.jpg
+Disallow: *.jpeg
+Disallow: *.png
+Disallow: *.webp
+Disallow: *.svg
+Disallow: *.ico
+
+# Contact for permissions: thewebdev3333@gmail.com
