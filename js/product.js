@@ -16,6 +16,23 @@ if (root) {
   const orderBar = document.querySelector("[data-order-bar]");
   const orderBarCount = document.querySelector("[data-order-count]");
   const orderBarTotal = document.querySelector("[data-order-total]");
+  const mainImage = document.querySelector("[data-product-image]");
+  const thumbButtons = [...document.querySelectorAll("[data-thumb]")];
+
+  for (const thumb of thumbButtons) {
+    thumb.addEventListener("click", () => {
+      if (!mainImage || !thumb.dataset.src) {
+        return;
+      }
+      mainImage.src = thumb.dataset.src;
+      for (const item of thumbButtons) {
+        item.setAttribute(
+          "aria-current",
+          String(item === thumb),
+        );
+      }
+    });
+  }
 
   const format = (value) =>
     `KSh ${new Intl.NumberFormat("en-KE", { maximumFractionDigits: 0 }).format(value)}`;

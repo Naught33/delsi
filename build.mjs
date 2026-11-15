@@ -39,6 +39,60 @@ const CATEGORY_DESCRIPTIONS = {
     "Electrical components and spare parts for butchery and meat processing equipment.",
 };
 
+const PRODUCT_IMAGES = {
+  "easy-bear": ["Assets/products/easybear.png"],
+  "shark-tools": ["Assets/products/shark_tools.png"],
+  "purple-paper": ["Assets/products/purple_paper.png"],
+  "blue-plastic": ["Assets/products/blue-plastic.jpg"],
+  starrett: ["Assets/products/starret.png"],
+  "bone-cutter": [
+    "Assets/products/bone_saw.png",
+    "Assets/products/bone_saw_3160mm.png",
+    "Assets/products/blades.png",
+  ],
+  "bone-cutter-bearing": ["Assets/products/bone_saw.png"],
+  "bone-cutter-upper-wheel-set": ["Assets/products/bone_saw.png"],
+  "bone-cutter-motor": ["Assets/products/bone_saw.png"],
+  "bone-cutter-fixed-handle-screw": ["Assets/products/bone_saw.png"],
+  "bone-cutter-plastic-gasket": ["Assets/products/bone_saw.png"],
+  "meat-mincer": [
+    "Assets/products/mincer_size_32.jpeg",
+    "Assets/products/mincer_size_22.jpeg",
+    "Assets/products/mincer_ch42.png",
+  ],
+  "fm-m12-parts": ["Assets/products/mincer_plates.jpeg"],
+  "fm-m22-parts": ["Assets/products/mincer_plates.jpeg"],
+  "fm-m32-parts": ["Assets/products/mincer_plates.jpeg"],
+  "fm-m42-parts": ["Assets/products/mincer_plates.jpeg"],
+  "meat-slicer": ["Assets/products/meat_slicer.png"],
+  "tube-ice-maker": ["Assets/products/flake_ice_maker.png"],
+  "flake-ice-maker": ["Assets/products/flake_ice_maker.png"],
+  "cold-room-unit": ["Assets/products/cold_room_unit.png"],
+  "vacuum-packaging-machine": ["Assets/products/vacuum_packaging_machine.jpeg"],
+  "sealing-machine": ["Assets/products/sealing_machine.png"],
+  "ptfe-high-t-cloth": ["Assets/products/ptfe_high_t_cloth.png"],
+  "powder-grinder": ["Assets/products/poweder_grider.jpg"],
+  "stainless-plate-with-holes": [
+    "Assets/products/stainless_steel_tray_with_holes.png",
+  ],
+  "stainless-plate-without-holes": [
+    "Assets/products/stainless_steel_tray_without_holes.png",
+  ],
+  "cooler-box": ["Assets/products/Cooler-Box.png"],
+  "chopping-board": ["Assets/products/stainless_steel_tray_without_holes.png"],
+  "meat-tenderizer": ["Assets/products/meat_tenterizer.png"],
+  scissors: ["Assets/products/sciscors.png"],
+  "s-shaped-hook": ["Assets/products/s-shaped_hooks.png"],
+  "boning-knife": ["Assets/products/bone_cutting_knife.png"],
+  "normal-knife": ["Assets/products/normal_knife.png"],
+  "5cr15mov-knife": ["Assets/products/5cr15mov_knife.png"],
+  "7cr17mov-knife": ["Assets/products/7CrI7MoV_knife.jpg"],
+  switch: ["Assets/products/switch.jpeg"],
+  fuse: ["Assets/products/fuse.png"],
+};
+
+const FALLBACK_IMAGE = "Assets/products/bone_saw.png";
+
 const esc = (value) =>
   String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -407,10 +461,13 @@ function normalize(data) {
         status = "small";
       }
 
-      const imageFile = path.join(siteRoot, "Assets", "products", `${id}.jpg`);
-      const image = fs.existsSync(imageFile)
-        ? `Assets/products/${id}.jpg`
-        : "Assets/products/bone_cutter.jpg";
+      const images = (PRODUCT_IMAGES[id] || [FALLBACK_IMAGE]).filter((file) =>
+        fs.existsSync(path.join(siteRoot, file)),
+      );
+      if (!images.length) {
+        throw new Error(`No product image found for ${id}`);
+      }
+      const image = images[0];
       const sizes = [
         ...new Set(variants.map((variant) => variant.size).filter(Boolean)),
       ];
@@ -428,7 +485,7 @@ function normalize(data) {
         categoryName: category.category,
         categoryOrder: categoryIndex + 1,
         image,
-        images: [image],
+        images,
         description,
         tags,
         featured: Number(rawProduct.featured) || 0,
@@ -607,6 +664,19 @@ function productPage(product, allProducts, categories) {
     ],
   };
 
+  const galleryMarkup =
+    product.images.length > 1
+      ? `
+        <div class="product-thumbs">${product.images
+          .map(
+            (file, index) =>
+              `<button type="button" data-thumb data-src="../${file}" aria-label="View image ${index + 1} of ${product.images.length}"${
+                index === 0 ? ' aria-current="true"' : ""
+              }><img src="../${file}" alt="" width="64" height="48" loading="lazy" decoding="async"></button>`,
+          )
+          .join("")}</div>`
+      : "";
+
   const safeJson = (value) =>
     JSON.stringify(value).replaceAll("<", "\\u003c");
 
@@ -656,7 +726,7 @@ ${header("../", "products")}
     </nav>
     <div class="product-layout">
       <div class="product-media">
-        <img class="product-media__main" src="../${product.image}" alt="${esc(product.name)}" width="800" height="600" fetchpriority="high" decoding="async">
+        <img class="product-media__main" data-product-image src="../${product.image}" alt="${esc(product.name)}" width="800" height="600" fetchpriority="high" decoding="async">${galleryMarkup}
       </div>
       <div class="product-details">
         <a class="product-cat" href="../products.html?category=${product.categoryId}">${esc(product.categoryName)}</a>

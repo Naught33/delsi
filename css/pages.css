@@ -5,17 +5,16 @@
   min-height: 560px;
   min-height: max(560px, 85svh);
   overflow: hidden;
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image: url("../Assets/hero/hero-mobile.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ffffff;
 }
 
-.hero__media {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+[data-theme="dark"] .hero {
+  background-image: url("../Assets/hero/hero-mobile-dark.jpg");
 }
 
 .hero__overlay {
@@ -60,10 +59,12 @@
 @media (min-width: 768px) {
   .hero {
     min-height: max(560px, 80svh);
+    background-image: url("../Assets/hero/hero-desktop.jpg");
+    background-position: right center;
   }
 
-  .hero__media {
-    object-position: right center;
+  [data-theme="dark"] .hero {
+    background-image: url("../Assets/hero/hero-desktop-dark.jpg");
   }
 
   .hero__content {
