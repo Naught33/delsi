@@ -3,7 +3,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteRoot = path.dirname(fileURLToPath(import.meta.url));
-const sourcePath = path.join(siteRoot, "..", "_source", "products.master.json");
+const bundledSourcePath = path.join(siteRoot, "products.master.json");
+const legacySourcePath = path.join(siteRoot, "..", "_source", "products.master.json");
+const sourcePath = fs.existsSync(bundledSourcePath) ? bundledSourcePath : legacySourcePath;
 const productDir = path.join(siteRoot, "product");
 const siteUrl = "https://YOUR-DOMAIN";
 const phoneDisplay = "0727 990 709";

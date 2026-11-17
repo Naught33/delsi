@@ -1,0 +1,906 @@
+{
+  "meta": {
+    "currency": "KSh",
+    "site_name": "Delsi Meat Solutions",
+    "site_url": "https://YOUR-DOMAIN",
+    "price_adjustment": "original_price + 25%, rounded to nearest shilling",
+    "price_field": "price (customer-facing, adjusted)",
+    "original_price_field": "original_price (supplier price, never published)",
+    "shipping_note": "National uniform price does not include shipping costs."
+  },
+  "categories": [
+    {
+      "category": "Band Saw Blades",
+      "products": [
+        {
+          "model": "Easy bear",
+          "variants": [
+            {
+              "size": "1550x16",
+              "original_price": 556,
+              "price": 695,
+              "status": "available",
+              "vid": "1550x16"
+            },
+            {
+              "size": "1650x16",
+              "original_price": 577,
+              "price": 721,
+              "status": "available",
+              "vid": "1650x16"
+            },
+            {
+              "size": "1840x16",
+              "original_price": 649,
+              "price": 811,
+              "status": "available",
+              "vid": "1840x16"
+            },
+            {
+              "size": "1860x16",
+              "original_price": 659,
+              "price": 824,
+              "status": "available",
+              "vid": "1860x16"
+            },
+            {
+              "size": "2080x16",
+              "original_price": 691,
+              "price": 864,
+              "status": "available",
+              "vid": "2080x16"
+            },
+            {
+              "size": "2360x16",
+              "original_price": 761,
+              "price": 951,
+              "status": "available",
+              "vid": "2360x16"
+            },
+            {
+              "size": "2400x16",
+              "original_price": 759,
+              "price": 949,
+              "status": "available",
+              "vid": "2400x16"
+            },
+            {
+              "size": "2460x16",
+              "original_price": 787,
+              "price": 984,
+              "status": "available",
+              "vid": "2460x16"
+            },
+            {
+              "size": "2845x16",
+              "original_price": 871,
+              "price": 1089,
+              "status": "available",
+              "vid": "2845x16"
+            },
+            {
+              "size": "2950x16",
+              "original_price": 876,
+              "price": 1095,
+              "status": "available",
+              "vid": "2950x16"
+            },
+            {
+              "size": "3160x16",
+              "original_price": 945,
+              "price": 1181,
+              "status": "available",
+              "vid": "3160x16"
+            },
+            {
+              "size": "3160x19",
+              "original_price": 997,
+              "price": 1246,
+              "status": "available",
+              "vid": "3160x19"
+            },
+            {
+              "size": "3200x19",
+              "original_price": 997,
+              "price": 1246,
+              "status": "available",
+              "vid": "3200x19"
+            },
+            {
+              "size": "3248x19",
+              "original_price": 997,
+              "price": 1246,
+              "status": "available",
+              "vid": "3248x19"
+            },
+            {
+              "size": "3328x19",
+              "original_price": 1050,
+              "price": 1313,
+              "status": "available",
+              "vid": "3328x19"
+            },
+            {
+              "size": "3580x16",
+              "original_price": 1050,
+              "price": 1313,
+              "status": "available",
+              "vid": "3580x16"
+            }
+          ],
+          "id": "easy-bear",
+          "description": "Easy Bear band saw blades in a wide range of lengths for different bone saws. A practical, dependable choice for everyday butchery work."
+        },
+        {
+          "model": "Shark tools",
+          "tags": [
+            "hot_product"
+          ],
+          "variants": [
+            {
+              "size": "1550x16",
+              "original_price": 515,
+              "price": 644,
+              "status": "available",
+              "vid": "1550x16"
+            },
+            {
+              "size": "1650x16",
+              "original_price": 525,
+              "price": 656,
+              "status": "available",
+              "vid": "1650x16"
+            },
+            {
+              "size": "1800x16",
+              "original_price": 645,
+              "price": 806,
+              "status": "available",
+              "vid": "1800x16"
+            },
+            {
+              "size": "1860x16",
+              "original_price": 659,
+              "price": 824,
+              "status": "available",
+              "vid": "1860x16"
+            },
+            {
+              "size": "2360x16",
+              "original_price": 761,
+              "price": 951,
+              "status": "available",
+              "vid": "2360x16"
+            },
+            {
+              "size": "2400x19",
+              "original_price": 759,
+              "price": 949,
+              "status": "available",
+              "vid": "2400x19"
+            },
+            {
+              "size": "2950x16",
+              "original_price": 867,
+              "price": 1084,
+              "status": "available",
+              "vid": "2950x16"
+            },
+            {
+              "size": "3100x19",
+              "original_price": 945,
+              "price": 1181,
+              "status": "available",
+              "vid": "3100x19"
+            },
+            {
+              "size": "3160x19",
+              "original_price": 950,
+              "price": 1188,
+              "status": "available",
+              "vid": "3160x19"
+            },
+            {
+              "size": "3328x19",
+              "original_price": 1050,
+              "price": 1313,
+              "status": "available",
+              "vid": "3328x19"
+            }
+          ],
+          "id": "shark-tools",
+          "featured": 6,
+          "description": "Long-lasting band saw blades for consistent, clean cuts. Shark Tools blades are a dependable choice for busy butcheries and processing lines."
+        },
+        {
+          "model": "Purple paper",
+          "variants": [
+            {
+              "size": "1650x16",
+              "original_price": 735,
+              "price": 919,
+              "status": "clear_inventory",
+              "vid": "1650x16"
+            }
+          ],
+          "id": "purple-paper"
+        },
+        {
+          "model": "Blue plastic",
+          "variants": [
+            {
+              "size": "1650x16",
+              "original_price": 735,
+              "price": 919,
+              "status": "clear_inventory",
+              "vid": "1650x16"
+            }
+          ],
+          "id": "blue-plastic"
+        },
+        {
+          "model": "Starrett",
+          "tags": [
+            "short_term_discount"
+          ],
+          "variants": [
+            {
+              "size": "1650x16",
+              "original_price": 630,
+              "price": 788,
+              "status": "available",
+              "note": "Short-term discount",
+              "vid": "1650x16"
+            }
+          ],
+          "id": "starrett",
+          "description": "Starrett band saw blades known for consistent tooth quality and long service life. Currently available in a 1650x16 size."
+        }
+      ],
+      "id": "band-saw-blades"
+    },
+    {
+      "category": "Bone Cutters",
+      "products": [
+        {
+          "model": "Bone cutter",
+          "variants": [
+            {
+              "size": "1650mm TS",
+              "original_price": 42000,
+              "price": 52500,
+              "status": "available",
+              "note": "TS extra saw blade",
+              "vid": "1650mm-ts"
+            },
+            {
+              "size": "1650mm YK",
+              "original_price": 43500,
+              "price": 54375,
+              "status": "available",
+              "note": "Trade in your old machine for the same model and receive a subsidy of KSh 13,000",
+              "vid": "1650mm-yk"
+            },
+            {
+              "size": "3160mm Stainless, three/single phase electricity",
+              "original_price": 279000,
+              "price": 348750,
+              "status": "available",
+              "note": "Hot product",
+              "vid": "3160mm-stainless-three-single-phase-electricity"
+            }
+          ],
+          "id": "bone-cutter",
+          "featured": 1,
+          "description": "A heavy-duty bone cutter built for butchers, hotels and meat processors. Choose the saw size, frame and power option that suits your daily volume. Trade-in options are available on selected models."
+        }
+      ],
+      "id": "bone-cutters"
+    },
+    {
+      "category": "Bone Cutter Parts",
+      "products": [
+        {
+          "model": "Bearing",
+          "variants": [
+            {
+              "size": "#6203",
+              "original_price": 400,
+              "price": 500,
+              "status": "available",
+              "vid": "6203"
+            },
+            {
+              "size": "#6205",
+              "original_price": 400,
+              "price": 500,
+              "status": "available",
+              "vid": "6205"
+            }
+          ],
+          "id": "bone-cutter-bearing"
+        },
+        {
+          "model": "Upper wheel set",
+          "variants": [
+            {
+              "size": null,
+              "original_price": 5000,
+              "price": 6250,
+              "status": "available",
+              "note": "Trade in your old item for a new one and get a discount of KSh 1,000",
+              "vid": "standard"
+            }
+          ],
+          "id": "bone-cutter-upper-wheel-set"
+        },
+        {
+          "model": "Motor",
+          "variants": [
+            {
+              "size": "YK",
+              "original_price": 5000,
+              "price": 6250,
+              "status": "available",
+              "vid": "yk"
+            },
+            {
+              "size": "TS",
+              "original_price": 4000,
+              "price": 5000,
+              "status": "available",
+              "vid": "ts"
+            }
+          ],
+          "id": "bone-cutter-motor"
+        },
+        {
+          "model": "Fixed handle screw",
+          "variants": [
+            {
+              "size": null,
+              "original_price": 3000,
+              "price": 3750,
+              "status": "available",
+              "vid": "standard"
+            }
+          ],
+          "id": "bone-cutter-fixed-handle-screw"
+        },
+        {
+          "model": "Plastic gasket",
+          "variants": [
+            {
+              "size": "For bone cutter",
+              "original_price": 200,
+              "price": 250,
+              "status": "available",
+              "vid": "for-bone-cutter"
+            }
+          ],
+          "id": "bone-cutter-plastic-gasket"
+        }
+      ],
+      "id": "bone-cutter-parts"
+    },
+    {
+      "category": "Meat Mincers",
+      "products": [
+        {
+          "model": "Meat mincer",
+          "variants": [
+            {
+              "size": "FM-M32",
+              "original_price": 47200,
+              "price": 59000,
+              "status": "available",
+              "vid": "fm-m32"
+            },
+            {
+              "size": "CH-#40",
+              "original_price": 210000,
+              "price": 262500,
+              "status": "available",
+              "vid": "ch-40"
+            }
+          ],
+          "id": "meat-mincer",
+          "featured": 2,
+          "description": "Commercial meat mincers for butchers, hotels, restaurants and processors, available in two capacity classes. Built for steady throughput and easy cleaning."
+        }
+      ],
+      "id": "meat-mincers"
+    },
+    {
+      "category": "Meat Mincer Parts",
+      "products": [
+        {
+          "model": "FM-M12",
+          "variants": [
+            {
+              "size": "Cross knife",
+              "original_price": 290,
+              "price": 363,
+              "status": "available",
+              "vid": "cross-knife"
+            }
+          ],
+          "id": "fm-m12-parts"
+        },
+        {
+          "model": "FM-M22",
+          "variants": [
+            {
+              "size": "Cross knife",
+              "original_price": 390,
+              "price": 488,
+              "status": "available",
+              "vid": "cross-knife"
+            },
+            {
+              "size": "Plate",
+              "original_price": 1500,
+              "price": 1875,
+              "status": "available",
+              "vid": "plate"
+            }
+          ],
+          "id": "fm-m22-parts"
+        },
+        {
+          "model": "FM-M32",
+          "variants": [
+            {
+              "size": "Cross knife",
+              "original_price": 490,
+              "price": 613,
+              "status": "available",
+              "vid": "cross-knife"
+            },
+            {
+              "size": "Plate",
+              "original_price": 1700,
+              "price": 2125,
+              "status": "available",
+              "vid": "plate"
+            }
+          ],
+          "id": "fm-m32-parts"
+        },
+        {
+          "model": "FM-M42",
+          "variants": [
+            {
+              "size": "Cross knife",
+              "original_price": 950,
+              "price": 1188,
+              "status": "available",
+              "vid": "cross-knife"
+            },
+            {
+              "size": "Plate",
+              "original_price": 3200,
+              "price": 4000,
+              "status": "available",
+              "vid": "plate"
+            }
+          ],
+          "id": "fm-m42-parts"
+        }
+      ],
+      "id": "meat-mincer-parts"
+    },
+    {
+      "category": "Meat Slicers",
+      "products": [
+        {
+          "model": "Meat slicer",
+          "variants": [
+            {
+              "size": "#10",
+              "original_price": 42300,
+              "price": 52875,
+              "status": "available",
+              "vid": "10"
+            },
+            {
+              "size": "#12",
+              "original_price": 57800,
+              "price": 72250,
+              "status": "available",
+              "vid": "12"
+            },
+            {
+              "size": "#13",
+              "original_price": 135000,
+              "price": 168750,
+              "status": "available",
+              "vid": "13"
+            }
+          ],
+          "id": "meat-slicer",
+          "featured": 3,
+          "description": "Commercial meat slicers in three sizes for delis, restaurants and butcheries. Consistent slices, simple controls and a compact footprint."
+        }
+      ],
+      "id": "meat-slicers"
+    },
+    {
+      "category": "Ice Makers",
+      "products": [
+        {
+          "model": "Tube ice maker",
+          "variants": [
+            {
+              "size": "0.5T/DAY",
+              "original_price": 980000,
+              "price": 1225000,
+              "status": "available",
+              "vid": "0-5t-day"
+            }
+          ],
+          "id": "tube-ice-maker"
+        },
+        {
+          "model": "Flake ice maker",
+          "variants": [
+            {
+              "size": "1T/DAY",
+              "original_price": 895000,
+              "price": 1118750,
+              "status": "available",
+              "vid": "1t-day"
+            },
+            {
+              "size": "3T/DAY",
+              "original_price": 3000000,
+              "price": 3750000,
+              "status": "out_of_stock",
+              "vid": "3t-day"
+            }
+          ],
+          "id": "flake-ice-maker",
+          "featured": 7,
+          "description": "Flake ice makers for display, transport and processing. Available in 1T/day and 3T/day capacities (3T/day currently out of stock)."
+        }
+      ],
+      "id": "ice-makers"
+    },
+    {
+      "category": "Cold Room Units",
+      "products": [
+        {
+          "model": "Cold room unit",
+          "note": "Machine only",
+          "variants": [
+            {
+              "size": "3HP",
+              "original_price": 269800,
+              "price": 337250,
+              "status": "available",
+              "vid": "3hp"
+            },
+            {
+              "size": "5HP",
+              "original_price": 368500,
+              "price": 460625,
+              "status": "available",
+              "vid": "5hp"
+            }
+          ],
+          "id": "cold-room-unit",
+          "featured": 5,
+          "description": "Cold room units sold as machine only, in 3HP and 5HP options. Ideal for building or upgrading a walk-in chiller with dependable cooling."
+        }
+      ],
+      "id": "cold-room-units"
+    },
+    {
+      "category": "Packaging",
+      "products": [
+        {
+          "model": "Vacuum packaging machine",
+          "variants": [
+            {
+              "size": "VP-320",
+              "original_price": 52500,
+              "price": 65625,
+              "status": "available",
+              "vid": "vp-320"
+            },
+            {
+              "size": "VP-400",
+              "original_price": 72500,
+              "price": 90625,
+              "status": "available",
+              "vid": "vp-400"
+            },
+            {
+              "size": "K20",
+              "original_price": 4000,
+              "price": 5000,
+              "status": "small_inventory",
+              "vid": "k20"
+            }
+          ],
+          "id": "vacuum-packaging-machine",
+          "featured": 4,
+          "description": "Vacuum packaging machines that extend shelf life and keep meat presentation clean. Suitable for butcheries, kitchens and small processors."
+        },
+        {
+          "model": "Sealing machine",
+          "variants": [
+            {
+              "size": "300mm",
+              "original_price": 1800,
+              "price": 2250,
+              "status": "available",
+              "vid": "300mm"
+            }
+          ],
+          "id": "sealing-machine"
+        },
+        {
+          "model": "PTFE high-T cloth",
+          "variants": [
+            {
+              "size": "30mm x 0.18mm x 10m",
+              "original_price": 550,
+              "price": 688,
+              "status": "small_inventory",
+              "vid": "30mm-x-0-18mm-x-10m"
+            },
+            {
+              "size": "35mm x 0.18mm x 10m",
+              "original_price": 650,
+              "price": 813,
+              "status": "small_inventory",
+              "vid": "35mm-x-0-18mm-x-10m"
+            },
+            {
+              "size": "40mm x 0.18mm x 10m",
+              "original_price": 730,
+              "price": 913,
+              "status": "small_inventory",
+              "vid": "40mm-x-0-18mm-x-10m"
+            }
+          ],
+          "id": "ptfe-high-t-cloth"
+        }
+      ],
+      "id": "packaging"
+    },
+    {
+      "category": "Processing Equipment and Accessories",
+      "products": [
+        {
+          "model": "Powder grinder",
+          "tags": [
+            "short_term_discount"
+          ],
+          "variants": [
+            {
+              "size": "1000 C",
+              "original_price": 6300,
+              "price": 7875,
+              "status": "available",
+              "vid": "1000-c"
+            }
+          ],
+          "id": "powder-grinder"
+        },
+        {
+          "model": "Stainless plate with holes",
+          "variants": [
+            {
+              "size": "60x40x4.8",
+              "original_price": 1470,
+              "price": 1838,
+              "status": "available",
+              "vid": "60x40x4-8"
+            }
+          ],
+          "id": "stainless-plate-with-holes"
+        },
+        {
+          "model": "Stainless plate without holes",
+          "variants": [
+            {
+              "size": "60x40x4.8",
+              "original_price": 1570,
+              "price": 1963,
+              "status": "available",
+              "vid": "60x40x4-8"
+            }
+          ],
+          "id": "stainless-plate-without-holes"
+        },
+        {
+          "model": "Cooler box",
+          "variants": [
+            {
+              "size": "120L",
+              "original_price": 9500,
+              "price": 11875,
+              "status": "available",
+              "vid": "120l"
+            }
+          ],
+          "id": "cooler-box"
+        },
+        {
+          "model": "Chopping board",
+          "variants": [
+            {
+              "size": "40x60x2cm",
+              "original_price": 3000,
+              "price": 3750,
+              "status": "available",
+              "vid": "40x60x2cm"
+            }
+          ],
+          "id": "chopping-board"
+        },
+        {
+          "model": "Meat tenderizer",
+          "variants": [
+            {
+              "size": "20x7.5x4.5",
+              "original_price": 2600,
+              "price": 3250,
+              "status": "available",
+              "vid": "20x7-5x4-5"
+            }
+          ],
+          "id": "meat-tenderizer"
+        },
+        {
+          "model": "Scissors",
+          "variants": [
+            {
+              "size": "SK5",
+              "original_price": 335,
+              "price": 419,
+              "status": "available",
+              "vid": "sk5"
+            }
+          ],
+          "id": "scissors"
+        },
+        {
+          "model": "S-shaped hook",
+          "variants": [
+            {
+              "size": "3.4mm",
+              "original_price": 30,
+              "price": 38,
+              "status": "available",
+              "vid": "3-4mm"
+            },
+            {
+              "size": "6mm",
+              "original_price": 50,
+              "price": 63,
+              "status": "available",
+              "vid": "6mm"
+            },
+            {
+              "size": "8mm",
+              "original_price": 100,
+              "price": 125,
+              "status": "available",
+              "vid": "8mm"
+            },
+            {
+              "size": "10mm",
+              "original_price": 180,
+              "price": 225,
+              "status": "available",
+              "vid": "10mm"
+            }
+          ],
+          "id": "s-shaped-hook"
+        }
+      ],
+      "id": "processing-equipment-and-accessories"
+    },
+    {
+      "category": "Knives",
+      "products": [
+        {
+          "model": "Boning knife",
+          "variants": [
+            {
+              "size": null,
+              "original_price": 800,
+              "price": 1000,
+              "status": "available",
+              "vid": "standard"
+            }
+          ],
+          "id": "boning-knife"
+        },
+        {
+          "model": "Normal knife",
+          "variants": [
+            {
+              "size": null,
+              "original_price": 200,
+              "price": 250,
+              "status": "available",
+              "vid": "standard"
+            }
+          ],
+          "id": "normal-knife"
+        },
+        {
+          "model": "5Cr15MoV knife",
+          "variants": [
+            {
+              "size": null,
+              "original_price": 800,
+              "price": 1000,
+              "status": "available",
+              "vid": "standard"
+            }
+          ],
+          "id": "5cr15mov-knife"
+        },
+        {
+          "model": "7Cr17MoV knife",
+          "variants": [
+            {
+              "size": null,
+              "original_price": 2000,
+              "price": 2500,
+              "status": "available",
+              "vid": "standard"
+            }
+          ],
+          "id": "7cr17mov-knife"
+        }
+      ],
+      "id": "knives"
+    },
+    {
+      "category": "Electrical",
+      "products": [
+        {
+          "model": "Switch",
+          "variants": [
+            {
+              "size": "BS216B Al",
+              "original_price": 200,
+              "price": 250,
+              "status": "available",
+              "vid": "bs216b-al"
+            },
+            {
+              "size": "BS216B Cu",
+              "original_price": 300,
+              "price": 375,
+              "status": "waiting_for_arrival",
+              "vid": "bs216b-cu"
+            }
+          ],
+          "id": "switch"
+        },
+        {
+          "model": "Fuse",
+          "variants": [
+            {
+              "size": "BS1362 (25mm)",
+              "original_price": 0,
+              "price": 0,
+              "status": "available",
+              "note": "Free gift for customers who request one (limited amount). Not for non-customers.",
+              "vid": "bs1362-25mm"
+            }
+          ],
+          "id": "fuse"
+        }
+      ],
+      "id": "electrical"
+    }
+  ]
+}
