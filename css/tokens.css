@@ -17,7 +17,8 @@
   --red-700: #8e0000;
   --red-400: #ff6b5e;
   --red-100: #fdecea;
-  --wa-green: #0e7c3a;
+  --wa-green: #25D366;
+  --wa-green-hover: #1DA851;
 
   /* Typography */
   --font-heading: "Montserrat", "Montserrat Fallback", system-ui, -apple-system, "Segoe UI", sans-serif;

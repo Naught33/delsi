@@ -1,0 +1,7 @@
+{
+  "name": "delsi-site",
+  "private": true,
+  "type": "module",
+  "scripts": { "icons": "node scripts/build-icons.mjs" },
+  "devDependencies": { "@phosphor-icons/core": "2.1.1" }
+}

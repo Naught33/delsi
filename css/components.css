@@ -530,7 +530,7 @@ html[data-motion="full"] .mobile-menu nav li:nth-child(3) {
 }
 
 .btn--whatsapp:hover {
-  background: #0a6330;
+  background: var(--wa-green-hover, #1DA851);
 }
 
 .btn--whatsapp .icon {
@@ -1105,7 +1105,7 @@ dialog::backdrop {
 }
 
 .wa-fab:hover {
-  background: #0a6330;
+  background: var(--wa-green-hover, #1DA851);
 }
 
 .wa-fab:active {

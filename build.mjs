@@ -50,10 +50,10 @@ const PRODUCT_IMAGES = {
     "Assets/products/bone_saw_3160mm.png",
     "Assets/products/blades.png",
   ],
-  "bone-cutter-bearing": ["Assets/products/bone_saw.png"],
-  "bone-cutter-upper-wheel-set": ["Assets/products/bone_saw.png"],
+  "bone-cutter-bearing": ["Assets/products/bone_cutter_bearing.png"],
+  "bone-cutter-upper-wheel-set": ["Assets/products/bone_cutter_upper_wheel_set.png"],
   "bone-cutter-motor": ["Assets/products/bone_saw.png"],
-  "bone-cutter-fixed-handle-screw": ["Assets/products/bone_saw.png"],
+  "bone-cutter-fixed-handle-screw": ["Assets/products/bone_cutter_fixed_handle_screw.jpg"],
   "bone-cutter-plastic-gasket": ["Assets/products/bone_saw.png"],
   "meat-mincer": [
     "Assets/products/mincer_size_32.jpeg",
@@ -172,7 +172,7 @@ const productBadges = (product, prefix = "") => {
       ? `<span class="badge badge--accent">${icon("check", prefix)}Discount</span>`
       : "",
     product.tradein
-      ? `<span class="badge badge--gold">${icon("check", prefix)}Trade-in offer</span>`
+      ? `<span class="badge badge--gold">${icon("swap", prefix)}Trade-in offer</span>`
       : "",
     product.clearance
       ? `<span class="badge badge--clear">${icon("check", prefix)}Clearance</span>`
@@ -315,7 +315,8 @@ const header = (prefix = "", current = "") => {
       <a class="icon-btn" href="${prefix}products.html?focus=search" aria-label="Search products">${icon("search", prefix)}</a>
       <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">${icon("moon", prefix)}${icon("sun", prefix, "icon-sun")}</button>
       <button class="icon-btn" type="button" data-open-prefs aria-label="Accessibility and display preferences" aria-haspopup="dialog">${icon("accessibility", prefix)}</button>
-      <a class="btn btn--primary btn--sm header-wa" href="${waLink("Hello Delsi Meat Solutions, I would like to know more about your products.")}" data-wa-page target="_blank" rel="noopener">${icon("whatsapp", prefix, "icon--filled")}WhatsApp</a>
+      <a class="icon-btn header-call" href="tel:+254727990709" aria-label="Call 0727 990 709">${icon("phone", prefix)}</a>
+      <a class="btn btn--whatsapp btn--sm header-wa" href="${waLink("Hello Delsi Meat Solutions, I would like to know more about your products.")}" data-wa-page target="_blank" rel="noopener">${icon("whatsapp", prefix, "icon--filled")}WhatsApp</a>
       <button class="icon-btn icon-btn--menu" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">${icon("menu", prefix, "icon-menu")}${icon("close", prefix, "icon-close")}</button>
     </div>
   </div>
@@ -708,6 +709,7 @@ ${PREFS_SCRIPT}
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/components.css">
 <link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/refresh.css">
 <script type="application/ld+json">${safeJson(jsonLd)}</script>
 <script type="application/ld+json">${safeJson(breadcrumbJson)}</script>
 </head>

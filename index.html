@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/pages.css">
+<link rel="stylesheet" href="css/refresh.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,7 +75,8 @@
       <a class="icon-btn" href="products.html?focus=search" aria-label="Search products"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-search"></use></svg></a>
       <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><svg class="icon icon-moon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-moon"></use></svg><svg class="icon icon-sun" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-sun"></use></svg></button>
       <button class="icon-btn" type="button" data-open-prefs aria-label="Accessibility and display preferences" aria-haspopup="dialog"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-accessibility"></use></svg></button>
-      <a class="btn btn--primary btn--sm header-wa" href="https://wa.me/254727990709?text=Hello%20Delsi%20Meat%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." data-wa-page target="_blank" rel="noopener"><svg class="icon icon--filled" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-whatsapp"></use></svg>WhatsApp</a>
+      <a class="icon-btn header-call" href="tel:+254727990709" aria-label="Call 0727 990 709"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-phone"></use></svg></a>
+      <a class="btn btn--whatsapp btn--sm header-wa" href="https://wa.me/254727990709?text=Hello%20Delsi%20Meat%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products." data-wa-page target="_blank" rel="noopener"><svg class="icon icon--filled" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-whatsapp"></use></svg>WhatsApp</a>
       <button class="icon-btn icon-btn--menu" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><svg class="icon icon-menu" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-menu"></use></svg><svg class="icon icon-close" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-close"></use></svg></button>
     </div>
   </div>
@@ -92,15 +94,17 @@
 
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <span class="eyebrow">Butchery equipment · Kilimani Nairobi</span>
-      <h1 id="hero-title">Your trusted partner in butchery and meat processing solutions</h1>
-      <p>Delsi Meat Solutions supplies quality bone saws, meat mincers, vacuum packers, slicers and cold rooms, with reliable support and nationwide delivery.</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="products.html">Browse products<svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
-        <a class="btn btn--outline-light" href="https://wa.me/254727990709?text=Hello%20Delsi%20Meat%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." data-wa-page target="_blank" rel="noopener"><svg class="icon icon--filled" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-whatsapp"></use></svg>Chat on WhatsApp</a>
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="eyebrow">Butchery equipment · Kilimani, Nairobi</span>
+        <h1 id="hero-title">Cut <span>clean.</span><br>Run <em>hard.</em></h1>
+        <p>Bone saws, mincers, slicers, vacuum packers and cold rooms for butchers, hotels and processors. Delivered across Kenya.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="products.html">Browse products<svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
+          <a class="btn btn--whatsapp" href="https://wa.me/254727990709?text=Hello%20Delsi%20Meat%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." data-wa-page target="_blank" rel="noopener"><svg class="icon icon--filled" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-whatsapp"></use></svg>Chat on WhatsApp</a>
+        </div>
       </div>
+      <div class="hero__art" role="img" aria-label="Delsi bone saw, meat mincer, vacuum packer, flake ice maker and band saw blades"></div>
     </div>
   </section>
 
@@ -179,13 +183,13 @@
       <!-- Promotions: edit this block only. Confirm every offer with Delsi before publishing. -->
       <div class="promo-grid">
         <article class="promo">
-          <span class="badge badge--clear"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-check"></use></svg>Trade-in</span>
+          <span class="badge badge--clear"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-swap"></use></svg>Trade-in</span>
           <h3>KSh 13,000 trade-in subsidy</h3>
           <p>Trade in your old bone cutter for the same model and receive a KSh 13,000 subsidy.</p>
           <a class="link-arrow" href="product/bone-cutter.html">See the bone cutter<svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
         </article>
         <article class="promo promo--red">
-          <span class="badge badge--accent"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-check"></use></svg>Trade-in</span>
+          <span class="badge badge--accent"><svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-swap"></use></svg>Trade-in</span>
           <h3>KSh 1,000 off an upper wheel set</h3>
           <p>Trade in your old bone cutter upper wheel set and save KSh 1,000 on a new one.</p>
           <a class="link-arrow" href="product/bone-cutter-upper-wheel-set.html">See the upper wheel set<svg class="icon" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-arrow-right"></use></svg></a>
@@ -240,7 +244,7 @@
   <section class="closing-band" aria-labelledby="closing-title">
     <div class="container">
       <h2 id="closing-title">Not sure which machine you need?</h2>
-      <a class="btn btn--light" href="https://wa.me/254727990709?text=Hello%20Delsi%20Meat%20Solutions%2C%20I%20need%20help%20choosing%20the%20right%20machine." data-wa-page target="_blank" rel="noopener"><svg class="icon icon--filled" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-whatsapp"></use></svg>Talk to us on WhatsApp</a>
+      <a class="btn btn--whatsapp" href="https://wa.me/254727990709?text=Hello%20Delsi%20Meat%20Solutions%2C%20I%20need%20help%20choosing%20the%20right%20machine." data-wa-page target="_blank" rel="noopener"><svg class="icon icon--filled" aria-hidden="true"><use href="Assets/icons/sprite.svg#i-whatsapp"></use></svg>Talk to us on WhatsApp</a>
     </div>
   </section>
 </main>
