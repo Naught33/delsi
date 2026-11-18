@@ -15,6 +15,7 @@ const MAP = {
   "chevron-left": ["regular", "caret-left"], "chevron-right": ["regular", "caret-right"],
   "chevron-down": ["regular", "caret-down"], "arrow-right": ["regular", "arrow-right"],
   sliders: ["regular", "sliders-horizontal"], "map-pin": ["regular", "map-pin"], phone: ["regular", "phone"],
+  mail: ["regular", "envelope-simple"],
   clock: ["regular", "clock"], truck: ["regular", "truck"], "shield-check": ["regular", "shield-check"],
   headset: ["regular", "headset"], flame: ["regular", "fire"], plus: ["regular", "plus"],
   minus: ["regular", "minus"], check: ["regular", "check"], share: ["regular", "share-network"],

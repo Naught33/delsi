@@ -383,9 +383,9 @@ const footer = (prefix = "", categories = []) => {
           <li>${icon("whatsapp", prefix, "icon--filled")}<a href="${waLink("Hello Delsi Meat Solutions, I would like to make an enquiry.")}" target="_blank" rel="noopener" data-wa-page>WhatsApp us</a></li>
           <li>${icon("map-pin", prefix)}<a href="${mapsUrl}" target="_blank" rel="noopener">53 Park Ring Road, Kilimani, Nairobi</a></li>
           <li>${icon("clock", prefix)}<span>Monday to Saturday</span></li>
-          <li><span class="footer-email"><a href="mailto:info@delsimeatsolutions.co.ke">info@delsimeatsolutions.co.ke</a> &mdash; inquiries</span></li>
-          <li><span class="footer-email"><a href="mailto:sales@delsimeatsolutions.co.ke">sales@delsimeatsolutions.co.ke</a> &mdash; sales, invoices and related requests</span></li>
-          <li><span class="footer-email"><a href="mailto:support@delsimeatsolutions.co.ke">support@delsimeatsolutions.co.ke</a> &mdash; support and support inquiries</span></li>
+          <li>${icon("mail", prefix)}<span class="footer-email"><a href="mailto:info@delsimeatsolutions.co.ke">info@delsimeatsolutions.co.ke</a></span></li>
+          <li>${icon("mail", prefix)}<span class="footer-email"><a href="mailto:sales@delsimeatsolutions.co.ke">sales@delsimeatsolutions.co.ke</a></span></li>
+          <li>${icon("mail", prefix)}<span class="footer-email"><a href="mailto:support@delsimeatsolutions.co.ke">support@delsimeatsolutions.co.ke</a></span></li>
           <li>${icon("facebook", prefix, "icon--filled")}<a href="${facebookUrl}" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
