@@ -2,7 +2,7 @@
   "meta": {
     "currency": "KSh",
     "site_name": "Delsi Meat Solutions",
-    "site_url": "https://YOUR-DOMAIN",
+    "site_url": "https://delsimeatsolutions.co.ke",
     "price_adjustment": "original_price + 25%, rounded to nearest shilling",
     "price_field": "price (customer-facing, adjusted)",
     "original_price_field": "original_price (supplier price, never published)",
@@ -13,7 +13,7 @@
       "category": "Band Saw Blades",
       "products": [
         {
-          "model": "Easy bear",
+          "model": "Saw blades",
           "variants": [
             {
               "size": "1550x16",
@@ -128,11 +128,11 @@
               "vid": "3580x16"
             }
           ],
-          "id": "easy-bear",
-          "description": "Easy Bear band saw blades in a wide range of lengths for different bone saws. A practical, dependable choice for everyday butchery work."
+          "id": "saw-blades-1550-3580",
+          "description": "Replacement band saw blades in a wide range of lengths for different bone saws. A practical, dependable choice for everyday butchery work."
         },
         {
-          "model": "Shark tools",
+          "model": "Saw blades",
           "tags": [
             "hot_product"
           ],
@@ -208,9 +208,8 @@
               "vid": "3328x19"
             }
           ],
-          "id": "shark-tools",
-          "featured": 6,
-          "description": "Long-lasting band saw blades for consistent, clean cuts. Shark Tools blades are a dependable choice for busy butcheries and processing lines."
+          "id": "saw-blades-1550-3328",
+          "description": "Long-lasting band saw blades for consistent, clean cuts. A dependable choice for busy butcheries and processing lines."
         },
         {
           "model": "Purple paper",
@@ -239,7 +238,7 @@
           "id": "blue-plastic"
         },
         {
-          "model": "Starrett",
+          "model": "Saw blades",
           "tags": [
             "short_term_discount"
           ],
@@ -253,46 +252,74 @@
               "vid": "1650x16"
             }
           ],
-          "id": "starrett",
-          "description": "Starrett band saw blades known for consistent tooth quality and long service life. Currently available in a 1650x16 size."
+          "id": "saw-blades-1650",
+          "description": "Band saw blades known for consistent tooth quality and long service life. Currently available in a 1650x16 size."
         }
       ],
       "id": "band-saw-blades"
     },
     {
-      "category": "Bone Cutters",
+      "category": "Electric Bone Saw Machines",
       "products": [
         {
-          "model": "Bone cutter",
+          "model": "Bone saw J210",
+          "tags": [
+            "bone cutter",
+            "electric bone saw machine"
+          ],
           "variants": [
             {
-              "size": "1650mm TS",
+              "size": "1650 mm TS",
               "original_price": 42000,
               "price": 52500,
               "status": "available",
               "note": "TS extra saw blade",
-              "vid": "1650mm-ts"
-            },
+              "vid": "1650-mm-ts"
+            }
+          ],
+          "id": "bone-saw-j210",
+          "featured": 1,
+          "description": "Electric bone saw machine, model J210, with a 1650 mm TS cutting length. Built for butchers, hotels and meat processors who need dependable daily cutting."
+        },
+        {
+          "model": "Bone saw J250",
+          "tags": [
+            "bone cutter",
+            "electric bone saw machine"
+          ],
+          "variants": [
             {
-              "size": "1650mm YK",
+              "size": "1650 mm YK",
               "original_price": 43500,
               "price": 54375,
               "status": "available",
               "note": "Trade in your old machine for the same model and receive a subsidy of KSh 10,000",
-              "vid": "1650mm-yk"
-            },
+              "vid": "1650-mm-yk"
+            }
+          ],
+          "id": "bone-saw-j250",
+          "featured": 2,
+          "description": "Electric bone saw machine, model J250, with a 1650 mm YK cutting length. Trade-in options are available on selected machines."
+        },
+        {
+          "model": "Bone saw 3160 mm",
+          "tags": [
+            "bone cutter",
+            "electric bone saw machine"
+          ],
+          "variants": [
             {
-              "size": "3160mm Stainless, three/single phase electricity",
+              "size": "3160 mm stainless, three/single phase electricity",
               "original_price": 279000,
               "price": 348750,
               "status": "available",
               "note": "Hot product",
-              "vid": "3160mm-stainless-three-single-phase-electricity"
+              "vid": "3160-mm-stainless-three-single-phase-electricity"
             }
           ],
-          "id": "bone-cutter",
-          "featured": 1,
-          "description": "A heavy-duty bone cutter built for butchers, hotels and meat processors. Choose the saw size, frame and power option that suits your daily volume. Trade-in options are available on selected models."
+          "id": "bone-saw-3160mm",
+          "featured": 7,
+          "description": "Electric bone saw machine with a 3160 mm stainless cutting length and three/single phase electricity options for higher-volume processing."
         }
       ],
       "id": "bone-cutters"
@@ -387,26 +414,78 @@
       "category": "Meat Mincers",
       "products": [
         {
-          "model": "Meat mincer",
+          "model": "Mincer",
+          "tags": [
+            "meat grinder",
+            "grinder"
+          ],
           "variants": [
             {
-              "size": "FM-M32",
+              "size": "#12",
+              "original_price": 20000,
+              "price": 25000,
+              "status": "available",
+              "vid": "12"
+            },
+            {
+              "size": "#22",
+              "original_price": 32000,
+              "price": 40000,
+              "status": "available",
+              "vid": "22"
+            },
+            {
+              "size": "#32",
               "original_price": 47200,
               "price": 59000,
               "status": "available",
-              "vid": "fm-m32"
+              "vid": "32"
             },
             {
-              "size": "CH-#40",
-              "original_price": 210000,
-              "price": 262500,
+              "size": "#42",
+              "original_price": 209600,
+              "price": 262000,
               "status": "available",
-              "vid": "ch-40"
+              "vid": "42"
             }
           ],
           "id": "meat-mincer",
-          "featured": 2,
-          "description": "Commercial meat mincers for butchers, hotels, restaurants and processors, available in two capacity classes. Built for steady throughput and easy cleaning."
+          "featured": 3,
+          "description": "Commercial meat mincer, also called a meat grinder or grinder, available in #12, #22, #32 and #42 sizes for busy butcheries, kitchens and processors."
+        },
+        {
+          "model": "Manual meat mincer",
+          "tags": [
+            "manual grinder",
+            "meat grinder",
+            "grinder"
+          ],
+          "variants": [
+            {
+              "size": "#12",
+              "original_price": 2000,
+              "price": 2500,
+              "status": "available",
+              "vid": "12"
+            },
+            {
+              "size": "#22",
+              "original_price": 2800,
+              "price": 3500,
+              "status": "available",
+              "vid": "22"
+            },
+            {
+              "size": "#32",
+              "original_price": 3600,
+              "price": 4500,
+              "status": "available",
+              "vid": "32"
+            }
+          ],
+          "id": "manual-meat-mincer",
+          "featured": 4,
+          "description": "Manual meat mincer for small butcheries and home kitchens, available in #12, #22 and #32 sizes. A simple grinder that needs no power."
         }
       ],
       "id": "meat-mincers"
@@ -415,77 +494,74 @@
       "category": "Meat Mincer Parts",
       "products": [
         {
-          "model": "FM-M12",
+          "model": "Cross knife",
           "variants": [
             {
-              "size": "Cross knife",
-              "original_price": 290,
-              "price": 363,
+              "size": "FM M12",
+              "original_price": 1200,
+              "price": 1500,
               "status": "available",
-              "vid": "cross-knife"
-            }
-          ],
-          "id": "fm-m12-parts"
-        },
-        {
-          "model": "FM-M22",
-          "variants": [
-            {
-              "size": "Cross knife",
-              "original_price": 390,
-              "price": 488,
-              "status": "available",
-              "vid": "cross-knife"
+              "vid": "fm-m12"
             },
             {
-              "size": "Plate",
-              "original_price": 1500,
-              "price": 1875,
+              "size": "FM M22",
+              "original_price": 2000,
+              "price": 2500,
               "status": "available",
-              "vid": "plate"
-            }
-          ],
-          "id": "fm-m22-parts"
-        },
-        {
-          "model": "FM-M32",
-          "variants": [
-            {
-              "size": "Cross knife",
-              "original_price": 490,
-              "price": 613,
-              "status": "available",
-              "vid": "cross-knife"
+              "vid": "fm-m22"
             },
             {
-              "size": "Plate",
-              "original_price": 1700,
-              "price": 2125,
+              "size": "FM M32",
+              "original_price": 2800,
+              "price": 3500,
               "status": "available",
-              "vid": "plate"
-            }
-          ],
-          "id": "fm-m32-parts"
-        },
-        {
-          "model": "FM-M42",
-          "variants": [
-            {
-              "size": "Cross knife",
-              "original_price": 950,
-              "price": 1188,
-              "status": "available",
-              "vid": "cross-knife"
+              "vid": "fm-m32"
             },
             {
-              "size": "Plate",
-              "original_price": 3200,
-              "price": 4000,
+              "size": "FM M42",
+              "original_price": 3600,
+              "price": 4500,
               "status": "available",
-              "vid": "plate"
+              "vid": "fm-m42"
             }
           ],
-          "id": "fm-m42-parts"
+          "id": "cross-knife",
+          "description": "Replacement cross knives for meat mincers, available for FM M12, FM M22, FM M32 and FM M42 models."
+        },
+        {
+          "model": "Plates",
+          "variants": [
+            {
+              "size": "FM M12",
+              "original_price": 2000,
+              "price": 2500,
+              "status": "available",
+              "vid": "fm-m12"
+            },
+            {
+              "size": "FM M22",
+              "original_price": 2800,
+              "price": 3500,
+              "status": "available",
+              "vid": "fm-m22"
+            },
+            {
+              "size": "FM M32",
+              "original_price": 3600,
+              "price": 4500,
+              "status": "available",
+              "vid": "fm-m32"
+            },
+            {
+              "size": "FM M42",
+              "original_price": 4000,
+              "price": 5000,
+              "status": "available",
+              "vid": "fm-m42"
+            }
+          ],
+          "id": "plates",
+          "description": "Replacement mincer plates for FM M12, FM M22, FM M32 and FM M42 meat mincers."
         }
       ],
       "id": "meat-mincer-parts"
@@ -519,7 +595,7 @@
             }
           ],
           "id": "meat-slicer",
-          "featured": 3,
+          "featured": 5,
           "description": "Commercial meat slicers in three sizes for delis, restaurants and butcheries. Consistent slices, simple controls and a compact footprint."
         }
       ],
@@ -560,7 +636,6 @@
             }
           ],
           "id": "flake-ice-maker",
-          "featured": 7,
           "description": "Flake ice makers for display, transport and processing. Available in 1T/day and 3T/day capacities (3T/day currently out of stock)."
         }
       ],
@@ -589,7 +664,6 @@
             }
           ],
           "id": "cold-room-unit",
-          "featured": 5,
           "description": "Cold room units sold as machine only, in 3HP and 5HP options. Ideal for building or upgrading a walk-in chiller with dependable cooling."
         }
       ],
@@ -614,53 +688,50 @@
               "price": 90625,
               "status": "available",
               "vid": "vp-400"
-            },
-            {
-              "size": "K20",
-              "original_price": 4000,
-              "price": 5000,
-              "status": "small_inventory",
-              "vid": "k20"
             }
           ],
           "id": "vacuum-packaging-machine",
-          "featured": 4,
+          "featured": 6,
           "description": "Vacuum packaging machines that extend shelf life and keep meat presentation clean. Suitable for butcheries, kitchens and small processors."
         },
         {
           "model": "Sealing machine",
+          "tags": [
+            "impulse sealer"
+          ],
           "variants": [
             {
               "size": "300mm",
-              "original_price": 1800,
-              "price": 2250,
+              "original_price": 2800,
+              "price": 3500,
               "status": "available",
               "vid": "300mm"
             }
           ],
-          "id": "sealing-machine"
+          "id": "sealing-machine",
+          "description": "Impulse sealer for sealing packaging used with meat products, in a 300mm size."
         },
         {
           "model": "PTFE high-T cloth",
           "variants": [
             {
               "size": "30mm x 0.18mm x 10m",
-              "original_price": 550,
-              "price": 688,
+              "original_price": 800,
+              "price": 1000,
               "status": "small_inventory",
               "vid": "30mm-x-0-18mm-x-10m"
             },
             {
               "size": "35mm x 0.18mm x 10m",
-              "original_price": 650,
-              "price": 813,
+              "original_price": 1200,
+              "price": 1500,
               "status": "small_inventory",
               "vid": "35mm-x-0-18mm-x-10m"
             },
             {
               "size": "40mm x 0.18mm x 10m",
-              "original_price": 730,
-              "price": 913,
+              "original_price": 1600,
+              "price": 2000,
               "status": "small_inventory",
               "vid": "40mm-x-0-18mm-x-10m"
             }

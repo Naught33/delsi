@@ -1,5 +1,6 @@
 import { showToast, copyText } from "./site.js";
 import { waLink, orderMessage, productGreeting } from "./whatsapp.js";
+import { openDialog, watchDialog } from "./prefs.js";
 
 const root = document.querySelector("[data-product-page]");
 if (root) {
@@ -18,6 +19,12 @@ if (root) {
   const orderBarTotal = document.querySelector("[data-order-total]");
   const mainImage = document.querySelector("[data-product-image]");
   const thumbButtons = [...document.querySelectorAll("[data-thumb]")];
+  const shareDialog = document.getElementById("share-dialog");
+  const shareLink = document.querySelector("[data-share-link]");
+  const shareWhatsapp = document.querySelector("[data-share-whatsapp]");
+  let orderNudgeTimer;
+  let orderNudgeShown = false;
+  let hasUserSelection = false;
 
   for (const thumb of thumbButtons) {
     thumb.addEventListener("click", () => {
@@ -87,6 +94,26 @@ if (root) {
       data.quantity.value = "1";
     }
     setRowEnabled(data, checked);
+  }
+
+  function clearOrderNudge() {
+    window.clearTimeout(orderNudgeTimer);
+    for (const button of orderButtons) {
+      button.classList.remove("is-highlighted");
+    }
+  }
+
+  function scheduleOrderNudge() {
+    if (orderNudgeShown) {
+      return;
+    }
+    window.clearTimeout(orderNudgeTimer);
+    orderNudgeTimer = window.setTimeout(() => {
+      orderNudgeShown = true;
+      for (const button of orderButtons) {
+        button.classList.add("is-highlighted");
+      }
+    }, 45000);
   }
 
   function selections() {
@@ -169,6 +196,12 @@ if (root) {
       button.href = href;
     }
 
+    if (chosen.length && hasUserSelection) {
+      scheduleOrderNudge();
+    } else {
+      clearOrderNudge();
+    }
+
     window.history.replaceState({}, "", sel ? `${base}?sel=${sel}` : base);
 
     if (shareButton) {
@@ -210,6 +243,7 @@ if (root) {
         data.quantity.value = String(Math.min(99, Math.max(1, quantity)));
       }
       setRowEnabled(data, true);
+      hasUserSelection = true;
     }
     update();
   }
@@ -218,6 +252,7 @@ if (root) {
     const data = rowData(row);
     if (data.checkbox) {
       data.checkbox.addEventListener("change", () => {
+        hasUserSelection = true;
         syncRow(data);
         update();
       });
@@ -227,6 +262,7 @@ if (root) {
         if (!data.quantity || data.quantity.disabled) {
           return;
         }
+        hasUserSelection = true;
         const step = button.dataset.step === "up" ? 1 : -1;
         const next = Math.min(
           99,
@@ -237,6 +273,7 @@ if (root) {
       });
     }
     data.quantity?.addEventListener("change", () => {
+      hasUserSelection = true;
       const next = Math.min(
         99,
         Math.max(1, Number.parseInt(data.quantity.value, 10) || 1),
@@ -247,7 +284,15 @@ if (root) {
     setRowEnabled(data, Boolean(data.checkbox?.checked) || (isSingle && data.price > 0 && data.status !== "out_of_stock"));
   }
 
+  for (const button of orderButtons) {
+    button.addEventListener("click", () => {
+      hasUserSelection = false;
+      clearOrderNudge();
+    });
+  }
+
   clearButton?.addEventListener("click", () => {
+    hasUserSelection = false;
     for (const data of rows.map(rowData)) {
       if (data.checkbox) {
         data.checkbox.checked = false;
@@ -260,22 +305,25 @@ if (root) {
     update();
   });
 
+  watchDialog(shareDialog);
+
   shareButton?.addEventListener("click", async () => {
     const url = shareButton.dataset.shareUrl || window.location.href;
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: productName,
-          text: `${productName} from Delsi Meat Solutions`,
-          url,
-        });
-        return;
-      } catch (error) {
-        if (error.name === "AbortError") {
-          return;
-        }
-      }
+    if (shareLink) {
+      shareLink.value = url;
     }
+    if (shareWhatsapp) {
+      shareWhatsapp.href = waLink(`${productName} from Delsi Meat Solutions\n\n${url}`);
+    }
+    const ok = await copyText(url);
+    showToast(ok ? "Link copied — share it anywhere" : "Copy the link to share it");
+    openDialog(shareDialog);
+    shareLink?.focus();
+    shareLink?.select();
+  });
+
+  document.querySelector("[data-share-copy]")?.addEventListener("click", async () => {
+    const url = shareLink?.value || window.location.href;
     const ok = await copyText(url);
     showToast(ok ? "Link copied" : "Could not copy the link");
   });

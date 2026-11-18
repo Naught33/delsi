@@ -14,4 +14,4 @@ Disallow: *.webp
 Disallow: *.svg
 Disallow: *.ico
 
-# Contact for permissions: thewebdev3333@gmail.com
+# Contact for permissions: info@delsimeatsolutions.co.ke

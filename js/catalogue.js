@@ -467,7 +467,18 @@ function matchesFilters(product) {
   return true;
 }
 
+function priorityRank(product) {
+  const rank = Number(product.featured);
+  return Number.isFinite(rank) && rank > 0 ? rank : Number.MAX_SAFE_INTEGER;
+}
+
 function compareRecommended(a, b, scores) {
+  if (!state.q && activeFilterCount() === 0) {
+    const priority = priorityRank(a) - priorityRank(b);
+    if (priority !== 0) {
+      return priority;
+    }
+  }
   if (state.q) {
     const diff = (scores.get(b.id) || 0) - (scores.get(a.id) || 0);
     if (diff !== 0) {

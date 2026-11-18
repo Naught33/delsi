@@ -86,6 +86,87 @@ function initWhatsAppLinks() {
   }
 }
 
+const ENGAGED_KEY = "delsi-wa-engaged";
+const NUDGE_KEY = "delsi-wa-nudges";
+
+function sessionRead(key, fallback = "") {
+  try {
+    return window.sessionStorage.getItem(key) || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function sessionWrite(key, value) {
+  try {
+    window.sessionStorage.setItem(key, value);
+  } catch {
+    /* storage can be unavailable in private browsing */
+  }
+}
+
+function initWhatsAppNudge() {
+  const fab = document.querySelector("[data-wa-cta]");
+  const heroCta = document.querySelector("[data-wa-hero]");
+  if ((!fab && !heroCta) || document.documentElement.getAttribute("data-motion") === "off") {
+    return;
+  }
+
+  const markEngaged = () => sessionWrite(ENGAGED_KEY, "1");
+  const isEngaged = () => sessionRead(ENGAGED_KEY) === "1";
+  const getNudges = () => Number.parseInt(sessionRead(NUDGE_KEY, "0"), 10) || 0;
+
+  if (/products\.html|\/product\//.test(window.location.pathname)) {
+    markEngaged();
+  }
+
+  if (fab) {
+    fab.addEventListener("click", markEngaged);
+  }
+  if (heroCta) {
+    heroCta.addEventListener("click", markEngaged);
+  }
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("[data-wa-page], [data-order-button], [data-share], .product-card")) {
+      markEngaged();
+      if (fab) {
+        fab.classList.remove("is-pulsing");
+      }
+      if (heroCta) {
+        heroCta.classList.remove("is-pulsing");
+      }
+    }
+  });
+
+  const pulse = (target) => {
+    if (!target) {
+      return;
+    }
+    target.classList.remove("is-pulsing");
+    void target.offsetWidth;
+    target.classList.add("is-pulsing");
+    window.setTimeout(() => target.classList.remove("is-pulsing"), 4000);
+  };
+
+  const remind = () => {
+    if (!fab || isEngaged() || getNudges() >= 2) {
+      return;
+    }
+    sessionWrite(NUDGE_KEY, String(getNudges() + 1));
+    pulse(fab);
+  };
+
+  if (heroCta) {
+    window.setTimeout(() => {
+      if (!isEngaged()) {
+        pulse(heroCta);
+      }
+    }, 1200);
+  }
+  window.setTimeout(remind, 30000);
+  window.setTimeout(remind, 60000);
+}
+
 function initReveal() {
   const items = document.querySelectorAll(".reveal");
   if (!items.length) {
@@ -160,6 +241,7 @@ function init() {
   document.documentElement.classList.add("js");
   initHeader();
   initWhatsAppLinks();
+  initWhatsAppNudge();
   initReveal();
   initCopyLinks();
   initYear();

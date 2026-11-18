@@ -1,6 +1,4 @@
 # robots.txt for Delsi Meat Solutions
-# Replace YOUR-DOMAIN with the real domain once it is purchased.
-
 User-agent: *
 Allow: /
 Disallow: /_source/
@@ -18,4 +16,4 @@ Disallow: /_source/
 # User-agent: ClaudeBot
 # Disallow: /
 
-Sitemap: https://YOUR-DOMAIN/sitemap.txt
+Sitemap: https://delsimeatsolutions.co.ke/sitemap.txt

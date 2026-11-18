@@ -7,7 +7,7 @@ const bundledSourcePath = path.join(siteRoot, "products.master.json");
 const legacySourcePath = path.join(siteRoot, "..", "_source", "products.master.json");
 const sourcePath = fs.existsSync(bundledSourcePath) ? bundledSourcePath : legacySourcePath;
 const productDir = path.join(siteRoot, "product");
-const siteUrl = "https://YOUR-DOMAIN";
+const siteUrl = "https://delsimeatsolutions.co.ke";
 const phoneDisplay = "0727 990 709";
 const phoneTel = "+254727990709";
 const whatsappNumber = "254727990709";
@@ -19,13 +19,13 @@ const CATEGORY_DESCRIPTIONS = {
   "band-saw-blades":
     "Replacement band saw blades for butchery and meat processing, available in a range of lengths and widths.",
   "bone-cutters":
-    "Heavy-duty bone cutters for butchers, hotels, restaurants and meat processors.",
+    "Electric bone saw machines for butchers, hotels, restaurants and meat processors.",
   "bone-cutter-parts":
     "Replacement parts for Delsi bone cutters, supplied for dependable repairs and long service.",
   "meat-mincers":
     "Commercial meat mincers built for steady throughput in busy kitchens and butcheries.",
   "meat-mincer-parts":
-    "Replacement knives and plates for meat mincers, available for several model sizes.",
+    "Replacement cross knives and plates for meat mincers, available for several model sizes.",
   "meat-slicers":
     "Commercial meat slicers for delis, restaurants and butcheries.",
   "ice-makers":
@@ -42,16 +42,14 @@ const CATEGORY_DESCRIPTIONS = {
 };
 
 const PRODUCT_IMAGES = {
-  "easy-bear": ["Assets/products/easybear.png"],
-  "shark-tools": ["Assets/products/shark_tools.png"],
+  "saw-blades-1550-3580": ["Assets/products/easybear.png"],
+  "saw-blades-1550-3328": ["Assets/products/shark_tools.png"],
   "purple-paper": ["Assets/products/purple_paper.png"],
   "blue-plastic": ["Assets/products/blue-plastic.jpg"],
-  starrett: ["Assets/products/starret.png"],
-  "bone-cutter": [
-    "Assets/products/bone_saw.png",
-    "Assets/products/bone_saw_3160mm.png",
-    "Assets/products/blades.png",
-  ],
+  "saw-blades-1650": ["Assets/products/starret.png"],
+  "bone-saw-j210": ["Assets/products/bone_saw.png"],
+  "bone-saw-j250": ["Assets/products/bone_saw.png"],
+  "bone-saw-3160mm": ["Assets/products/bone_saw_3160mm.png"],
   "bone-cutter-bearing": ["Assets/products/bone_cutter_bearing.png"],
   "bone-cutter-upper-wheel-set": ["Assets/products/bone_cutter_upper_wheel_set.png"],
   "bone-cutter-motor": ["Assets/products/bone_saw.png"],
@@ -62,10 +60,9 @@ const PRODUCT_IMAGES = {
     "Assets/products/mincer_size_22.jpeg",
     "Assets/products/mincer_ch42.png",
   ],
-  "fm-m12-parts": ["Assets/products/mincer_plates.jpeg"],
-  "fm-m22-parts": ["Assets/products/mincer_plates.jpeg"],
-  "fm-m32-parts": ["Assets/products/mincer_plates.jpeg"],
-  "fm-m42-parts": ["Assets/products/mincer_plates.jpeg"],
+  "cross-knife": ["Assets/products/blades.png"],
+  plates: ["Assets/products/mincer_plates.jpeg"],
+  "manual-meat-mincer": ["Assets/products/manual_mincer.jpg"],
   "meat-slicer": ["Assets/products/meat_slicer.png"],
   "tube-ice-maker": ["Assets/products/flake_ice_maker.png"],
   "flake-ice-maker": ["Assets/products/flake_ice_maker.png"],
@@ -270,10 +267,27 @@ const prefsDialog = (prefix = "") => `
   </div>
 </dialog>`;
 
+const shareDialog = (prefix = "") => `
+<dialog id="share-dialog" aria-labelledby="share-title">
+  <div class="dialog__head">
+    <h2 id="share-title">Share this product</h2>
+    <button class="icon-btn" type="button" data-close-dialog aria-label="Close share options">${icon("close", prefix)}</button>
+  </div>
+  <div class="dialog__body">
+    <p>The product link has been copied. Share it with anyone who needs it.</p>
+    <label class="field-label" for="share-link">Product link</label>
+    <input class="input" id="share-link" type="url" data-share-link readonly>
+    <div class="share-actions">
+      <button class="btn btn--outline" type="button" data-share-copy>${icon("link", prefix)}Copy link</button>
+      <a class="btn btn--whatsapp" data-share-whatsapp href="#" target="_blank" rel="noopener">${icon("whatsapp", prefix, "icon--filled")}Share on WhatsApp</a>
+    </div>
+  </div>
+</dialog>`;
+
 const fab = (prefix = "") => `
-<a class="wa-fab" href="${waLink("Hello Delsi Meat Solutions, I would like to know more about your products.")}" data-wa-page aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
+<a class="wa-fab" href="${waLink("Hello Delsi Meat Solutions, I would like to know more about your products.")}" data-wa-page data-wa-cta aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener">
   ${icon("whatsapp", prefix, "icon--filled")}
-  <span class="wa-fab__tip">Chat with us on WhatsApp</span>
+  <span class="wa-fab__tip">Have any inquiries? Chat with us on WhatsApp</span>
 </a>`;
 
 const PREFS_SCRIPT = `<script>(function(){var d=document.documentElement;d.classList.add("js");var p={};try{p=JSON.parse(localStorage.getItem("delsi-prefs")||"{}");}catch(e){}var m=window.matchMedia,dark=m&&m("(prefers-color-scheme: dark)").matches,rm=m&&m("(prefers-reduced-motion: reduce)").matches;var theme=(p.theme==="light"||p.theme==="dark")?p.theme:(dark?"dark":"light");var motion=p.motion==="off"?"off":(p.motion==="reduce"?"reduce":(rm?"reduce":"full"));d.setAttribute("data-theme",theme);d.setAttribute("data-motion",motion);if(p.text==="large"||p.text==="larger"){d.setAttribute("data-text",p.text);}if(p.contrast==="on"){d.setAttribute("data-contrast","high");}if(p.underline==="on"){d.setAttribute("data-underline","on");}var meta=document.querySelector('meta[name="theme-color"]');if(meta){meta.setAttribute("content",theme==="dark"?"#0F0F0F":"#FFFFFF");}})();</script>`;
@@ -315,7 +329,7 @@ const header = (prefix = "", current = "") => {
     </nav>
     <div class="header-actions">
       <a class="icon-btn" href="${prefix}products.html?focus=search" aria-label="Search products">${icon("search", prefix)}</a>
-      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">${icon("moon", prefix)}${icon("sun", prefix, "icon-sun")}</button>
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">${icon("moon", prefix, "icon-moon")}${icon("sun", prefix, "icon-sun")}</button>
       <button class="icon-btn" type="button" data-open-prefs aria-label="Accessibility and display preferences" aria-haspopup="dialog">${icon("accessibility", prefix)}</button>
       <a class="icon-btn header-call" href="tel:+254727990709" aria-label="Call 0727 990 709">${icon("phone", prefix)}</a>
       <a class="btn btn--whatsapp btn--sm header-wa" href="${waLink("Hello Delsi Meat Solutions, I would like to know more about your products.")}" data-wa-page target="_blank" rel="noopener">${icon("whatsapp", prefix, "icon--filled")}WhatsApp</a>
@@ -369,13 +383,15 @@ const footer = (prefix = "", categories = []) => {
           <li>${icon("whatsapp", prefix, "icon--filled")}<a href="${waLink("Hello Delsi Meat Solutions, I would like to make an enquiry.")}" target="_blank" rel="noopener" data-wa-page>WhatsApp us</a></li>
           <li>${icon("map-pin", prefix)}<a href="${mapsUrl}" target="_blank" rel="noopener">53 Park Ring Road, Kilimani, Nairobi</a></li>
           <li>${icon("clock", prefix)}<span>Monday to Saturday</span></li>
+          <li><span class="footer-email"><a href="mailto:info@delsimeatsolutions.co.ke">info@delsimeatsolutions.co.ke</a> &mdash; inquiries</span></li>
+          <li><span class="footer-email"><a href="mailto:sales@delsimeatsolutions.co.ke">sales@delsimeatsolutions.co.ke</a> &mdash; sales, invoices and related requests</span></li>
+          <li><span class="footer-email"><a href="mailto:support@delsimeatsolutions.co.ke">support@delsimeatsolutions.co.ke</a> &mdash; support and support inquiries</span></li>
           <li>${icon("facebook", prefix, "icon--filled")}<a href="${facebookUrl}" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; <span data-year>${new Date().getFullYear()}</span> Delsi Meat Solutions Ltd. All rights reserved.</p>
-      <p>Website by <a href="mailto:thewebdev3333@gmail.com">Thewebdev33</a></p>
     </div>
     <p class="footer-note">Prices are in KSh and exclude delivery. Final prices, stock and delivery costs are confirmed on WhatsApp.</p>
   </div>
@@ -778,6 +794,7 @@ ${header("../", "products")}
 ${footer("../", categories)}
 ${fab("../")}
 ${prefsDialog("../")}
+${shareDialog("../")}
 <script type="module" src="../js/site.js"></script>
 <script type="module" src="../js/product.js"></script>
 </body>
@@ -802,6 +819,11 @@ function build() {
       whatsapp: whatsappNumber,
       address: "53 Park Ring Road, Kilimani, Nairobi",
       openingDays: "Monday to Saturday",
+      emails: {
+        info: "info@delsimeatsolutions.co.ke",
+        sales: "sales@delsimeatsolutions.co.ke",
+        support: "support@delsimeatsolutions.co.ke",
+      },
       facebook: facebookUrl,
       shippingNote: "Prices are in KSh and exclude delivery.",
     },
