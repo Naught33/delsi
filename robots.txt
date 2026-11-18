@@ -16,4 +16,4 @@ Disallow: /_source/
 # User-agent: ClaudeBot
 # Disallow: /
 
-Sitemap: https://delsimeatsolutions.co.ke/sitemap.txt
+Sitemap: https://delsimeatsolutions.co.ke/sitemap.xml

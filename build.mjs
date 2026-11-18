@@ -868,19 +868,40 @@ function build() {
     );
   }
 
-  const sitemap = [
-    `${siteUrl}/`,
-    `${siteUrl}/products.html`,
-    `${siteUrl}/about.html`,
-    ...products.map((product) => `${siteUrl}/product/${product.slug}.html`),
+  const today = new Date().toISOString().slice(0, 10);
+  const sitemapEntries = [
+    { loc: `${siteUrl}/`, changefreq: "monthly", priority: "1.0" },
+    { loc: `${siteUrl}/products.html`, changefreq: "daily", priority: "0.9" },
+    { loc: `${siteUrl}/about.html`, changefreq: "yearly", priority: "0.5" },
+    ...products.map((product) => ({
+      loc: `${siteUrl}/product/${product.slug}.html`,
+      changefreq: "daily",
+      priority: "0.8",
+    })),
+  ];
+  const sitemapUrls = sitemapEntries.map(({ loc }) => loc);
+  fs.writeFileSync(path.join(siteRoot, "sitemap.txt"), `${sitemapUrls.join("\n")}\n`);
+
+  const sitemapXml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...sitemapEntries.flatMap(({ loc, changefreq, priority }) => [
+      "  <url>",
+      `    <loc>${esc(loc)}</loc>`,
+      `    <lastmod>${today}</lastmod>`,
+      `    <changefreq>${changefreq}</changefreq>`,
+      `    <priority>${priority}</priority>`,
+      "  </url>",
+    ]),
+    "</urlset>",
   ].join("\n");
-  fs.writeFileSync(path.join(siteRoot, "sitemap.txt"), `${sitemap}\n`);
+  fs.writeFileSync(path.join(siteRoot, "sitemap.xml"), `${sitemapXml}\n`);
 
   const robotsPath = path.join(siteRoot, "robots.txt");
   if (fs.existsSync(robotsPath)) {
     const robots = fs
       .readFileSync(robotsPath, "utf8")
-      .replace(/^Sitemap:.*$/m, `Sitemap: ${siteUrl}/sitemap.txt`);
+      .replace(/^Sitemap:.*$/m, `Sitemap: ${siteUrl}/sitemap.xml`);
     fs.writeFileSync(robotsPath, robots);
   }
 
